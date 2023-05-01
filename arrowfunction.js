@@ -38,11 +38,7 @@ console.log(SUM(IntArr));
 
 //(d) Return all the prime numbers in an array
 let NumArr=[2,4,5,7,10,20,11];
-let FindPrime= a=>{
-    let Input=[];
-    for(let i of a){
-        Input.push(i);
-    }
+let FindPrime= Input=>{
     let PrimeNumbers=[];
     for(let i=0;i<Input.length;i++){
         let count=0;
