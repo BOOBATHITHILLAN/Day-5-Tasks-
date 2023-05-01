@@ -35,11 +35,7 @@ console.log(Output(IntArr));
 
 //(d) Return all the prime numbers in an array
 let NumArr=[2,4,5,7,10,20,11];
-let FindPrime= function(a){
-    let Input=[];
-    for(let i of a){
-        Input.push(i);
-    }
+let FindPrime= function(Input){
     let PrimeNumbers=[];
     for(let i=0;i<Input.length;i++){
         let count=0;
@@ -58,10 +54,8 @@ console.log(FindPrime(NumArr));
 //(e) Return all the palindromes in an array
 
 let Inp=["12321","asdfg","abcba","12345","98789"];
-(function(e){
-    let Input=[];
+(function(Input){
     let Palindromes=[];
-    for(let i of e){Input.push(i);}
     for(let i in Input){
         let RevJoin=Input[i].split("").reverse().join("");
         if(Input[i]===RevJoin){
@@ -78,9 +72,7 @@ let Arr2=[3,5,2,7,10];
 if(Arr1.length===Arr2.length){
     let Arr=[...Arr1,...Arr2]
     let Input=Arr.sort((a,b)=> a-b);
-    (function(e){
-        let InArr=[];
-        for(let i of e){InArr.push(i)}
+    (function(InArr){
         let Len=InArr.length;
         let LenMid1= Len/2;
         let LenMid2= (LenMid1-1);
