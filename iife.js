@@ -25,17 +25,17 @@ let Input=StringArr[0].split(" ");
 
 //(c) Sum of all numbers in an array
 let IntArr=[1,4,5,7,10,20];
-let Output= function (a){
+(function (a){
     sum=0;
     for(i of a){
         sum=sum+i;
-    } return sum;
-}
-console.log(Output(IntArr));
+    } 
+    console.log(sum);
+})(IntArr);
 
 //(d) Return all the prime numbers in an array
 let NumArr=[2,4,5,7,10,20,11];
-let FindPrime= function(Input){
+(function(Input){
     let PrimeNumbers=[];
     for(let i=0;i<Input.length;i++){
         if(Input[i]>1){
@@ -49,9 +49,8 @@ let FindPrime= function(Input){
             }
         }
     }
-    return PrimeNumbers.join(",");
-} 
-console.log(FindPrime(NumArr));
+    console.log(PrimeNumbers.join(","));
+})(NumArr);
 
 //(e) Return all the palindromes in an array
 
@@ -89,20 +88,18 @@ if(Arr1.length===Arr2.length){
 
 //(g) Remove duplicates from an array
 let InputArray=[1,1,2,3,3,4,5,6,7,6,"a","b","b","a","s","d","f","g"];
-let RemoveDuplicate= function(e){
-    return [...new Set(e)];
-}
-console.log(RemoveDuplicate(InputArray));
+(function(e){
+    console.log([...new Set(e)]);
+})(InputArray);
 
 //(h) Rotate an array by k times
 let InputArr=[1,1,2,3] ;
-let RotateArray= function(e,k){
+(function(e,k){
     k=k%e.length;
     let Remove=e.splice(-k);
     e.unshift(...Remove);
-    return e;
+     console.log(e);
     
- }
-console.log(RotateArray(InputArr,3))
+ })(InputArr,3);
 
 
