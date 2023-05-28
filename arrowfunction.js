@@ -41,14 +41,16 @@ let NumArr=[2,4,5,7,10,20,11];
 let FindPrime= Input=>{
     let PrimeNumbers=[];
     for(let i=0;i<Input.length;i++){
-        let count=0;
-        for(let j=1;j<=Input[i];j++){
-            if(Input[i]%j===0){
-                count+=1;
+        if(Input[i]>1){
+            let count=0;
+            for(let j=2;j<=Input[i];j++){
+                if(Input[i]%j===0 && count!=3){
+                    count+=1;
+                }
+            }if(count===1){
+                PrimeNumbers.push(Input[i]);  
             }
-        }if(count===2){
-              PrimeNumbers.push(Input[i]);  
-            }
+        }
     }
     return PrimeNumbers.join(",");
 } 
